@@ -6,9 +6,6 @@ $('.nav-link').on('click', function async(e) {
   let hrefEl = $(hrefVal);
   let homeEl = hrefVal === '#home';
 
-  // $('.nav-link').removeClass('active');
-  // $(this).addClass('active');
-
   $('html').animate(
     {
       scrollTop: homeEl ? hrefEl.offset().top : hrefEl.offset().top - 150,
@@ -16,6 +13,9 @@ $('.nav-link').on('click', function async(e) {
     1000,
     'easeInOutExpo'
   );
+
+  $('.nav-link').removeClass('active');
+  $(this).addClass('active');
 });
 
 // Parallax
