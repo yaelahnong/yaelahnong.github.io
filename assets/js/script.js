@@ -1,14 +1,30 @@
+// device width
+const windowSize = $(window).width();
+const md = windowSize > 768;
+
 // Scroll
 $('.nav-link').on('click', function async(e) {
-  e.preventDefault();
+  md && e.preventDefault();
 
   let hrefVal = $(this).attr('href');
   let hrefEl = $(hrefVal);
   let homeEl = hrefVal === '#home';
+  let contactEl = hrefVal === '#contact';
+  console.log(md);
+
+  if (md) {
+    $('html').animate(
+      {
+        scrollTop: homeEl ? hrefEl.offset().top : hrefEl.offset().top - 150,
+      },
+      1000,
+      'easeInOutExpo'
+    );
+  }
 
   $('html').animate(
     {
-      scrollTop: homeEl ? hrefEl.offset().top : hrefEl.offset().top - 150,
+      scrollTop: homeEl ? hrefEl.offset().top : contactEl ? hrefEl.offset().top - 220 : hrefEl.offset().top - 150,
     },
     1000,
     'easeInOutExpo'
