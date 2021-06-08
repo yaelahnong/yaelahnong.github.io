@@ -1,0 +1,125 @@
+/* Custom Class */
+.bg-main,
+.btn-main {
+  background-color: #198754;
+}
+
+.bg-main-light {
+  background-color: #d1e7dd;
+}
+/* end of Custom Class */
+
+/* Jumbotron */
+.jumbotron {
+  padding-top: 5rem;
+}
+
+.jumbotron svg,
+.contact svg {
+  margin-bottom: -1px;
+}
+
+.jumbotron img {
+  width: 200px;
+}
+/* end of Jumbotron */
+
+/* About */
+.about .heading,
+.about .paragraph-left,
+.about .paragraph-right {
+  opacity: 0;
+  transform: translate(0, 40px);
+  transition: 0.5s;
+}
+
+.about .heading.scrolled,
+.about .paragraph-left.scrolled,
+.about .paragraph-right.scrolled {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+/* end of About */
+
+@media screen and (max-width: 687px) {
+  /* Responsive About */
+  .about .row:last-of-type {
+    text-align: center;
+  }
+  /* end of Responsive About */
+}
+
+/* Projects */
+
+.projects .heading,
+.projects .img-wrapper {
+  opacity: 0;
+  transform: translate(0, 40px);
+  transition: 0.5s;
+}
+
+.projects .img-wrapper {
+  overflow: hidden;
+  border: 5px solid #fff;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+}
+.projects .heading.scrolled,
+.projects .img-wrapper.scrolled {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.projects a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+}
+
+.projects .img-wrapper img,
+.projects .img-wrapper span {
+  transition: 0.2s ease-in-out;
+}
+
+.projects .img-wrapper:hover img {
+  transform: scale(1.025);
+  filter: brightness(50%);
+}
+
+.projects .img-wrapper span {
+  opacity: 0;
+  position: absolute;
+  color: #fff;
+  letter-spacing: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.projects .img-wrapper:hover span {
+  opacity: 1;
+  /* letter-spacing: 5px; */
+}
+/* end of Projects */
+
+/* Contact */
+.contact .heading,
+.contact .component {
+  opacity: 0;
+  transform: translate(0, 40px);
+  transition: 0.5s;
+}
+
+.contact .heading.scrolled,
+.contact .component.scrolled {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+footer p i {
+  opacity: 0;
+  font-size: 0;
+}
+/* end of Contact */
