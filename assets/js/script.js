@@ -10,7 +10,7 @@ $('.nav-link').on('click', function (e) {
     {
       scrollTop: homeEl ? hrefEl.offset().top : hrefEl.offset().top - 150,
     },
-    1000,
+    500,
     'easeInOutExpo'
   );
 
