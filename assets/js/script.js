@@ -1,20 +1,21 @@
 // Scroll
-$('.nav-link').on('click', function (e) {
-  $('.nav-link').removeClass('active');
-  $(this).addClass('active');
+$('.nav-link').on('click', function async(e) {
+  e.preventDefault();
 
   let hrefVal = $(this).attr('href');
   let hrefEl = $(hrefVal);
   let homeEl = hrefVal === '#home';
+
+  // $('.nav-link').removeClass('active');
+  // $(this).addClass('active');
+
   $('html').animate(
     {
       scrollTop: homeEl ? hrefEl.offset().top : hrefEl.offset().top - 150,
     },
-    500,
+    1000,
     'easeInOutExpo'
   );
-
-  e.preventDefault();
 });
 
 // Parallax
